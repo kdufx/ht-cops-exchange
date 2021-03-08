@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no;">
+    <title>Cordyceps Exchange Heco</title>
+    <link rel=icon href=favicon.ico>
+   
+    <link href=https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css rel=stylesheet>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/kdufx/ht-cops-exchange/css/app.css" rel="stylesheet">
+    
+    <!-- <link href=./css/bootstrap.min.css rel=stylesheet>
+    <link href=./css/app.css rel=stylesheet> -->
+
+  </head>
+<body class=bg-theme>
+  <div class="main-load text-center" style="margin-top: 5rem;"> 
+      <div class="d-flex align-items-center justify-content-center">
+        <div class=""><img class=mr-2 src=./img/logo-1.png style="width: 3rem;"></div> 
+          <div class=h3> Cordyceps<span class=yellow>.exchange</span></div>
+      </div>
+      <div class="h4 secondary" style="margin-top: 1rem;">
+          Loading...
+      </div>
+  </div>
+  <div class="main-page container-xl hide">
+    <div class=container_main>
+      
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- <h1 class="float-left">Cordyceps</h1> -->
+        <div id=nav_menu class=hide>
+          <button type=button class="hamburger is-closed animated fadeInLeft" data-toggle=offcanvas>
+            <span class=hamb-top></span>
+            <span class=hamb-middle></span>
+            <span class=hamb-bottom></span>
+          </button>           
+        </div>
+        
+        
+        <div class="mr-auto ml--2 d-flex align-items-center">
+          <div class=""><img class=mr-2 src=./img/logo-1.png style="width: 2rem;"></div> 
+          <div class=md_small> <a href=# class=vertical-center>Cordyceps<br class=pc_hide><span class=yellow>.exchange</span> <span class="small orange badge badge-pill bd_red">Heco</span></a></div>
+         
+        
+          
+        </div>
+       
+        <div class="">
+          <button class="btn md_btn btn-outline-secondary badge-pill mr-2" onclick="location.href='/'"> <i class="ri-arrow-left-right-fill ri-lg"></i> </button>
+          <button class="btn md_btn btn-dark badge-pill bd_1" onclick=App.jumpAccount()>
+            <svg t=1607166507981 class=vertical-center viewBox="0 0 1024 1024" version=1.1 xmlns=http://www.w3.org/2000/svg p-id=2715 width=20 height=20><path d="M832.84992 291.67616h-1.69984v-88.576a81.92 81.92 0 0 0-81.92-81.92l-591.86176 92.16c-58.38848 11.93984-81.92 46.90944-81.92 92.16v59.71968h0.43008a84.1728 84.1728 0 0 0-0.43008 8.37632v460.8a81.92 81.92 0 0 0 81.92 81.92h675.4816a81.92 81.92 0 0 0 81.92-81.92v-460.8a81.92 81.92 0 0 0-81.92-81.92z m-662.6304-7.79264l581.89824-90.61376c4.23936 1.24928 7.35232 5.18144 7.35232 9.8304v88.576H157.36832c-2.33472 0-4.62848 0.16384-6.92224 0.3584 2.99008-3.21536 8.68352-5.77536 19.77344-8.15104z m672.8704 387.13344H688.24064c-36.94592 0-67.01056-30.06464-67.01056-67.01056s30.06464-67.0208 67.01056-67.0208h154.84928v134.03136zM688.24064 465.3056c-76.58496 0-138.69056 62.08512-138.69056 138.7008 0 76.58496 62.09536 138.69056 138.69056 138.69056h154.84928v91.6992a10.24 10.24 0 0 1-10.24 10.24H157.36832a10.24 10.24 0 0 1-10.24-10.24v-460.8c0-5.64224 4.58752-10.24 10.24-10.24h602.10176v1.86368h71.68v-1.86368h1.69984c5.65248 0 10.24 4.59776 10.24 10.24v91.70944H688.24064z" fill=#708090 p-id=2716></path><path d="M709.96992 603.99616m-35.84 0a35.84 35.84 0 1 0 71.68 0 35.84 35.84 0 1 0-71.68 0Z" fill=#708090 p-id=2717></path></svg> 
+            <i class="ri-alert-fill orange wallet_no hide"></i>
+            <span class="secondary vertical-center wallet_nft_sum"></span>
+          </button>
+        </div>
+       
+
+        <div class=clearfix></div>
+      </nav>
+<!-- nav_wrapper -->
+      <div class="nav_page pc_hide">
+        <div class=nav_wrapper>
+
+          <div class=text-left id=sidebar-wrapper>
+            <div class=card>
+              <div class="card-body text-center s_nav_top">
+                 <div class="h2 secondary">
+                  Cordyceps 
+                </div>
+              </div>
+            </div>
+            <div class="card mt-2">
+              <div class="accordion h_menu">
+                <div class="card-title s_nav">
+                  <a href=javascript:void(0)>
+                    <div class="p-2 h4" data-toggle=collapse data-target=#s_nav_collect aria-expanded=true aria-controls=s_nav_collect>
+                      {{i18n-sncoll}}
+                    </div>
+                  </a>
+                </div>
+                <div id=s_nav_collect class="collapse show s_nav_nfts">
+                
+                </div>
+              </div>
+              
+            </div>
+            <div class="card mt-1 s_nav">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0I8UgBAHrB9bvyJ7ByTw80RtulGda9Dp2bYgd2MwAITX19w/viewform?usp=sf_link" target=_blank><div class=p-2>{{i18n-newnft}}</div></a> 
+            </div>
+            <div class="card mt-1 s_nav">
+              <a href=https://heco.dollarbalance.cash/#/banks target=_blank><div class=p-2>{{i18n-farmimg}}</div></a> 
+            </div>
+            <div class="card mt-1 s_nav">
+              <a href=javascript:void(0)><div class=p-2><a href=javascript:void(0) class=zh-cn onclick=App.setLanguage(this)>中文</a>/<a class=en-us href=javascript:void(0) onclick=App.setLanguage(this)>English</a> </div></a> 
+            </div>
+            <!-- <div class="card mt-1 s_nav" >
+              <a href="https://t.me/cordyceps_finance" target="_blank"><div class="p-2">{{i18n-contact}} </div></a> 
+            </div> -->
+            <div class="card mt-1 s_nav">
+              <a href=https://docs.cordyceps.finance target=_blank><div class=p-2>{{i18n-about}}</div></a> 
+            </div>
+
+            <div class="card-body mt-5 text-center p-0 py-3">
+              <div class=px-2>
+                <a class="secondary ml-3" href="https://ht.mdex.com/#/swap?outputCurrency=0x80dccc9bdc9b1659a226ae669457bd1e0b293a9b" target=_blank>Get DBC</a>
+                <a class="secondary ml-3" href=https://twitter.com/Cordyceps_Defi target=_blank>Twitter</a>
+                <a class="secondary ml-3" href=https://t.me/cordyceps_finance target=_blank>Telegram</a>
+
+              </div>
+              <div class="small gray mt-2">
+                Cordyceps.exchange is a digital marketplace for crypto collectibles and non-fungible tokens (NFTs).Sell,auction and discover exclusive digital assets.
+              </div>
+            </div>
+           
+  
+          </div>
+        </div>
+      </div>
+
+<!-- home -->
+      <div class="custom_page container-xl text-center" id=home> 
+        
+        <div class=row>
+          <div class="col col-md-3 col-xxl-2 s_nav_left p-1 md_hide" style="height: 400px;">
+            
+          </div>
+<!-- home-nft -->
+          <div class="custom_sub_page col-12 col-md-9 col-xxl-10 p-1" id=home_nft>
+            <div class="">
+              <div class="card mb-2">
+                <div class="row p-2 align-items-center">
+                  <div class="col-12 col-md-2 d-flex align-items-center justify-content-between px-1"><div class=hn_top_sum></div> <div class="pc_hide secondary hn_top_nft_name"></div></div>
+                 
+                  <div class="col-12 col-md-10 hn_top_sort d-flex align-items-center justify-content-end pr-1">
+                    <div class=mr-2>
+                      <button type=button class="btn md_btn btn-outline-secondary dropdown-toggle" id=hn_dd_level data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                        {{i18n-level}}
+                      </button>
+                      <div class=dropdown-menu aria-labelledby=hn_dd_level>
+                        <div class="dropdown-item white" value="" onclick=App.selectMatchLevel(this)>{{i18n-level}}</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_1" value=1 onclick=App.selectMatchLevel(this)>Lv1</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_2" value=2 onclick=App.selectMatchLevel(this)>Lv2</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_3" value=3 onclick=App.selectMatchLevel(this)>Lv3</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_4" value=4 onclick=App.selectMatchLevel(this)>Lv4</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_5" value=5 onclick=App.selectMatchLevel(this)>Lv5</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_level_6" value=6 onclick=App.selectMatchLevel(this)>Lv6</div>
+                      </div>
+                    </div>
+                    <div class=mr-2>
+                      <button type=button class="btn md_btn btn-outline-secondary dropdown-toggle" id=hn_dd_type data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                        {{i18n-type}}
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby=hn_dd_type>
+                        <div class="dropdown-item white" value="" onclick=App.selectMatchType(this)>{{i18n-type}}</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_type_0" value=0 onclick=App.selectMatchType(this)>{{i18n-fixprice}} </div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_type_1" value=1 onclick=App.selectMatchType(this)>{{i18n-onauction}} </div>
+                      </div>
+
+                    </div>
+                    <div>
+                      <button type=button class="btn md_btn btn-outline-secondary dropdown-toggle" id=hn_dd_sort data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                        {{i18n-sortreclist}}
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby=hn_dd_sort>
+                        <div class="dropdown-item white hn_sort_startTime-1" value='{"startTime":-1}' onclick=App.selectSort(this)>{{i18n-sortreclist}}</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_sort_startTime1" value='{"startTime":1}' onclick=App.selectSort(this)>{{i18n-sortexpsoon}}</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_sort_price1" value='{"price":1}' onclick=App.selectSort(this)>{{i18n-sortlowprice}}</div> <div class=dropdown-divider></div>
+                        <div class="dropdown-item white hn_sort_price-1" value='{"price":-1}' onclick=App.selectSort(this)>{{i18n-sorthighprice}}</div>
+                        <!-- <div class="dropdown-item white hn_sort_view" value="{view:-1}">View Most</div> -->
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card nft_lists" style="height: 70rem;overflow: auto;">
+                <div class="row hn_nft_lists">
+                </div>
+              </div>
+            </div>
+
+          </div>
+<!-- home-nft  end-->
+
+<!-- home_nft_item -->
+          <div class="custom_sub_page col-12 col-md-9 col-xxl-10 p-1 hide" id=home_nft_item>
+            <div class="">
+              <div class="card mb-2">
+                <div class="row align-items-center secondary">
+                  <div class="col-2 text-left p-0">
+                    <i class="ri-arrow-left-s-line ri-2x" aria-hidden=true onclick=App.itemBack()></i>
+                    
+                  </div>
+                  <div class=col-7><div class=hni_backup></div> </div>
+                
+                  <div class="col-3 d-flex justify-content-end align-items-center p-0">
+                    <div class="loading loading-lg hni_loading mr-4"></div>
+                    <div class="hni_nav hni_reload mr-3 pointer" data-toggle=tooltip data-placement=top title={{i18n-reload}} onclick=location.reload()>
+                      <i class="ri-restart-line ri-xl"></i>
+                    </div>
+                    
+                    <div class="hni_nav hni_share pointer mr-2" onclick=App.copyLink() data-toggle=tooltip data-placement=top title={{i18n-share}}>
+                      <div class=hni_share_url></div>
+                      <i class="ri-share-fill ri-xl"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=card>
+                <div class=row>
+                  <div class="col-12 col-md-5 p-2">
+                    <div class="card bd_2">
+                      <div class="p-2 hni_left">
+                        <img class=hni_img src="" alt="" style="width:20rem;height: 20rem; object-fit: contain;">
+                      </div>
+                      
+
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-7 p-3">
+                    <div class=hni_right>
+                      
+                      <div class=text-left>
+                        
+                        <div class="h3 secondary"><span class=hni_tid>...</span><i class="ri-auction-fill ml-1 hni_auction hide" aria-hidden=true></i><i class="ri-shopping-cart-2-fill ml-1 hni_fix hide" aria-hidden=true></i></div>
+                        <div class="h2 hni_name">...</div> 
+                        <div class="h5 d-flex align-items-center gray">
+                          <div class="">{{i18n-ownedby}}</div> <div class="ran_avatar ml-2" id=hni_ran_ava></div> <a class="ml-2 secondary hni_address" href=""></a> 
+                          
+                        </div>
+                        <div class="gray small mt-3 hni_last_sold hide"> </div>
+                        <div class="card bd_2 mt-4 p-3 hni_end_time orange hide h3"><span class=hni_et_num></span> <span class=hni_auction> {{i18n-auction}}</span> {{i18n-ends}}</div>
+                        <div class="card bd_2 mt-4 p-3">
+                          <div class="secondary hni_price_tip">{{i18n-curprice}}</div>
+                          <div class="secondary hni_auction hide">{{i18n-minbid}}</div>
+                          <div class="h1 mt-2 hni_token hide">
+                            <img class=hni_token_img src=./img/asset/1.png width=32px data-toggle=tooltip data-placement=top title=Cordyceps>
+                            <label class=hni_price></label> 
+                          </div>
+                          <div class="mt-2 mb-2">
+                            <button type=button class="btn mr-2 btn-lg btn-warning badge-pill hni_fix hide" onclick=App.buyItem()>{{i18n-buynow}}</button>
+                            <button type=button class="btn btn-lg btn-outline-secondary badge-pill hni_bid" onclick=App.bidItemModal()>{{i18n-bid}}</button>
+                          </div>
+                          <div class="mt--2 mb-2 hni_auction hide">
+                            <button type=button class="btn btn-lg btn-warning badge-pill hni_auction_bid" onclick=App.bidItemModal()>{{i18n-bidnow}}</button>
+                            <button type=button class="btn btn-lg btn-danger badge-pill hni_auction_rule" onclick=App.ruleAuction()>{{i18n-rulauction}}</button>
+                            <div class="secondary hni_auction mt-4 hide">{{i18n-auctip1}} <span class=hni_auction_bid_count></span> {{i18n-auctip2}}</div>
+                          </div>
+                      
+                          <div class="mt-2 mb-2">
+                            <button type=button class="btn btn-lg btn-danger badge-pill hni_sell hide" onclick=App.newItemModal()>{{i18n-sell}}</button>
+                            <button type=button class="btn md_mt_2 btn-lg btn-danger badge-pill hni_ed_update" onclick=App.updateItemModal()>{{i18n-udprice}}</button>
+                            <button type=button class="btn md_mt_2 btn-lg btn-outline-danger badge-pill hni_ed_cancel" onclick=App.cancelOrder()>{{i18n-cancel1}}</button>
+                           
+                          </div>
+                        </div>
+                        <div class=mt-4>
+                          <a class="secondary hni_pj" target=_blank href="">
+                            <i class="hni_pj_verified fa vertical-center" title=... aria-hidden=true></i>
+                            <span class=hni_pj_name></span>
+                          </a> 
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+              <div class="card mt-2 p-2">
+                <ul class="nav nav-tabs" id=hni_attribute role=tablist>
+                  <li class=nav-item role=presentation>
+                    <a class="nav-link active" id=hni_attribute_tab data-toggle=tab href=#hni_attribute_list role=tab aria-controls=hni_attribute_list aria-selected=true>{{i18n-attrs}}</a>
+                  </li>
+                </ul>
+                <div class=tab-content id=hni_attribute_content>
+                  <div class="tab-pane fade show active" id=hni_attribute_list role=tabpanel aria-labelledby=hni_attribute_tab>
+                    <div class="row ania_attrs">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-2 p-2">
+                <ul class="nav nav-tabs" id=hni_history role=tablist>
+                  <li class=nav-item role=presentation>
+                    <a class="nav-link active" id=hni_bids_tab data-toggle=tab onclick=App.loadNFTBids() href=#hni_nft_bids role=tab aria-controls=ab_bid_send aria-selected=false>{{i18n-bids}}</a>
+                  </li>
+                  <li class=nav-item role=presentation>
+                    <a class=nav-link id=hni_trade_tab data-toggle=tab onclick=App.loadNFTDeals() href=#hni_nft_trade role=tab aria-controls=hni_nft_trade aria-selected=true>{{i18n-tradehis}}</a>
+                  </li>
+                </ul>
+                <div class=tab-content id=hni_history_content style="height: 300px;overflow: auto;">
+                  <div class="tab-pane fade show active text-left" id=hni_nft_bids role=tabpanel aria-labelledby=hni_bids_tab>
+                    
+                    <div class="hni_hc_bids mt-2 secondary">
+
+                    </div>
+                    
+                  </div>
+                  <div class="tab-pane fade text-left" id=hni_nft_trade role=tabpanel aria-labelledby=hni_trade_tab>
+                    <div class="hni_nt_trade mt-2 secondary">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+<!-- nft_item_page  end-->
+
+
+
+        </div>
+
+    </div>
+<!-- home -->
+
+<!-- my account -->
+  <div class="custom_page container-xl text-center" id=account> 
+        
+        <div class=row>
+          <div class="col col-md-3 col-xxl-2 p-1" id=account_nav>
+            <div class=mb-2>
+              <div class="card p-2 text-center">
+                <div class="h5 d-flex align-items-center justify-content-center">
+                  <div class=ran_avatar id=an_ran_ava></div> <div class="ml-2 secondary an_address"></div> 
+                  
+                </div>
+              </div>
+              <div class="card mt-2">
+                <div class="accordion a_menu">
+                  <div class=card-title>
+                    <a href=javascript:void(0)>
+                      <div class="p-2 h5" data-toggle=collapse data-target=#a_collapse_nfts aria-expanded=true aria-controls=a_collapse_nfts>
+                        {{i18n-mynft}}
+                      </div>
+                    </a>
+                  </div>
+                  <div id=a_collapse_nfts class="secondary collapse show">
+                    <div class=an_nfts>
+                      <div class="p-2 bg-dark pointer">...</div>
+
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="card mt-1">
+                <div data-toggle=collapse data-target=#a_collapse_bids aria-expanded=true aria-controls=a_collapse_bids>
+                  <a href=javascript:void(0)><div class="p-2 h5">{{i18n-mybid}}</div></a> 
+                </div>
+                <div id=a_collapse_bids class="secondary collapse show">
+                  <div class="p-2 bg-dark pointer" onclick="App.scrollToBids('ab_receive_tab')">
+                    {{i18n-received}} <span class="a_bid_recNum yellow"></span>
+                  </div>
+                
+                  <div class="mt-1 p-2 bg-dark pointer" onclick="App.scrollToBids('ab_send_tab')">
+                    {{i18n-sent}} <span class=a_bid_sendNum></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+<!-- account-content -->
+          <div class="col-12 col-md-9 col-xxl-10 p-1" id=account_content>
+      <!-- account-nfts    -->
+            <div class="" id=account_nfts>
+             
+              <div class=card id=ac_nft_content style="height: 700px;overflow: auto;">
+                <div class="row ac_nft_lists">
+                  
+
+
+                </div>
+              </div>
+            </div>
+    <!-- account-nfts  end  -->
+   
+    <!-- account-bids    -->
+            <div class=mt-2 id=account_bids>
+             
+              <div>
+                <div class="card mt-2 p-2">
+                  <ul class="nav nav-tabs" role=tablist>
+                    <li class=nav-item role=presentation>
+                      <a class="nav-link active" id=ab_send_tab data-toggle=tab href=#ab_bid_send role=tab aria-controls=ab_bid_send aria-selected=false>{{i18n-send}}</a>
+                    </li>
+                    <li class=nav-item role=presentation>
+                      <a class=nav-link id=ab_receive_tab data-toggle=tab href=#ab_bid_receive role=tab aria-controls=ab_bid_receive aria-selected=true>{{i18n-receive}}</a>
+                    </li>
+                  </ul>
+                  <div class=tab-content id=ab_bid_content style="height: 300px;overflow: auto;">
+                    <div class="tab-pane fade show active text-left" id=ab_bid_send role=tabpanel aria-labelledby=ab_send_tab>
+                      <div class="ab_s_sends mt-2 vertical-center">
+                        
+                       
+                      </div>
+                      
+                    </div>
+                    <div class="tab-pane fade" id=ab_bid_receive role=tabpanel aria-labelledby=ab_receive_tab>
+                      <div class="ab_r_recs mt-2 vertical-center">
+                       
+                       
+                      </div>
+                     
+                    </div>
+                  </div>
+                </div>
+               
+               
+              </div>
+            </div>
+    <!-- account-bids  end  -->
+          </div>
+<!--account-content end-->
+
+        </div>
+
+    </div>
+<!-- my account  end-->
+
+
+    
+    </div>
+  
+
+
+
+<!--wallet modal -->
+<div class="modal fade" id=walletModal role=dialog aria-labelledby=walletModalLabel aria-hidden=true>
+  <div class="modal-dialog text-center">
+     <div class="modal-content white py-4">
+       <div class="md_hide p-3">
+         <div class="card bd_1 py-3">
+           <div class=h3> MetaMask</div>
+           <div class=m-4>
+             <img src=./img/metamask.svg style="width: 4rem;">
+           </div>
+           <div>
+             <button class="btn btn-dark yellow badge-pill mt-2" onclick="App.connectWallet(this,'MetaMask')">{{i18n-conwallet}}</button>
+           </div>
+
+         </div>
+       </div>
+       <div class="pc_hide p-2">
+        
+         <div class="card bd_1 py-4 mt-3">
+           <div class=h4>TokenPocket</div>
+           <div class=m-4>
+             <img src=./img/tp.png class=rounded style="width: 4rem;">
+           </div>
+           <div>
+             <button class="btn btn-dark yellow badge-pill mt-3" onclick="App.connectWallet(this,'TokenPocket')">{{i18n-connect}} TokenPocket</button>
+           </div>
+           
+           
+         </div>
+         <div class="card bd_1 py-4 mt-3">
+           <div class="h4 mt-3"> BitKeep</div>
+           <div class=m-4>
+             <img src=./img/bk.png class=rounded style="width: 4rem;">
+           </div>
+           <div>
+             <button class="btn btn-dark white badge-pill mt-3" onclick="App.connectWallet(this,'BitKeep')">{{i18n-connect}} BitKeep</button>
+           </div>
+    
+
+         </div>
+        </div>
+        <div class=my-3>
+            <button class="btn btn-dark badge-pill m-2" data-dismiss=modal>{{i18n-close}}</button>
+        </div>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+<!--Item Modal -->
+<div class="modal fade" id=itemModal tabindex=-1 role=dialog aria-hidden=true>
+  <div class="modal-dialog modal-dialog-centered" role=document>
+    <div class=modal-content>
+      <div class="">
+        <button type=button class="close secondary" data-dismiss=modal aria-label=Close>
+          <span aria-hidden=true>&times;</span>
+        </button>
+
+      </div>
+        <h2 class="modal-title im_title">New</h2>
+        <div class=modal-body>
+            <div class="card mt-2">
+              <form>
+                
+                <div class="input-group justify-content-center im_type_group">
+                  <!-- <label for="inputPassword" class="col-4 col-form-label">Type:</label> -->
+                  <div class="">
+                    <button class="btn btn-outline-secondary im_type im_fix active" type=button onclick=App.selectOrderType(0)>
+                      {{i18n-fixpricek}}
+                    </button>
+                    <button class="btn btn-outline-secondary im_type im_auction" type=button onclick=App.selectOrderType(1)>
+                      {{i18n-onauctionk}}
+                    </button>
+                  </div>
+                </div>
+                <div class="card bd_2 mt-3 text-center small im_info_group">
+                  <div class=row>
+                    <label class="col-6 col-md-4 col-form-label">Token ID:</label>
+                    <label class="col-6 col-md-8 col-form-label im_tid"></label>
+                  </div>
+                  <div class=row>
+                    <label class="col-6 col-6 col-md-4 col-form-label">{{i18n-lastsold}}:</label>
+                    <label class="col-6 col-6 col-md-8 col-form-label im_last_sold"></label>
+                  </div>
+                </div>
+                <div class=im_duration_group>
+                  <div class="input-group mb-2 mt-4 row">
+                    <div class="input-group-prepend col-6 col-md-4 p-0">
+                      <div class=input-group-text>{{i18n-duration}}</div>
+                    </div>
+                    <div class="col-6 col-md-8 p-0">
+                      <button class="btn btn-outline-secondary dropdown-toggle w-100 h-100" type=button id=im_dropdown_duration data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                        3 {{i18n-days}}
+                      </button>
+                      <div class="dropdown-menu text-center w-100" aria-labelledby=im_dropdown_duration>
+                        <div class="dropdown-item white im_duration_1" value=3 onclick=App.selectDuration(this)>3 {{i18n-days}}</div>
+                        <div class=dropdown-divider></div>
+                        <div class="dropdown-item white" value=7 onclick=App.selectDuration(this)> 7 {{i18n-days}}</div>
+                        <div class=dropdown-divider></div>
+                        <div class="dropdown-item white" value=30 onclick=App.selectDuration(this)> 30 {{i18n-days}}</div>
+                        <div class=dropdown-divider></div>
+                        <div class="dropdown-item white" value=60 onclick=App.selectDuration(this)> 60 {{i18n-days}}</div>
+                        <div class=dropdown-divider></div>
+                        <div class="dropdown-item white" value=90 onclick=App.selectDuration(this)> 90 {{i18n-days}}</div>
+
+                        <!-- <div class="dropdown-divider"></div>
+                        <div class="dropdown-item white" value='0.042' onclick="App.selectDuration(this)"> 1小时</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item white" value='0.252' onclick="App.selectDuration(this)"> 6小时</div>
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item white" value='0.5' onclick="App.selectDuration(this)"> 12小时</div> -->
+    
+                      </div>
+
+                    </div>
+                  </div>
+              </div>
+                <div class="input-group mb-2 mt-4 row">
+                  <div class="input-group-prepend col-6 col-md-4 p-0">
+                    <button class="btn btn-outline-secondary dropdown-toggle w-100" type=button id=im_dropdown_asset data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                     
+                    </button>
+                    <div class="dropdown-menu im_asset_lists" aria-labelledby=im_dropdown_asset>
+                      <!-- <div class="dropdown-item white im_asset_1" value='1' onclick="App.selectAsset(this)"><img class="" src="./img/asset/1.png" width="20px"> Cordyceps</div>
+                      <div class="dropdown-divider"></div>
+                      <div class="dropdown-item white im_asset_0" value='0' onclick="App.selectAsset(this)"><img class="" src="./img/asset/0.png" width="20px"> TRX</div> -->
+                    
+                    </div>
+                  </div>
+                  <input type=text class="form-control im_iuput_price col-6 col-md-8 p-0" placeholder=Price>
+                  
+                </div>
+                <div class="gray small im_fee"></div>
+              </form>
+            </div> 
+            <div class="card bd_green green mt-3 text-left order_success hide">
+              <div class=m-4><i class=ri-checkbox-circle-fill aria-hidden=true></i> 
+                <span class=order_success_log></span>
+              </div>
+            </div>
+            <div class="card bd_red orange mt-3 text-left order_error hide">
+              <div class=m-4><i class=ri-alert-fill aria-hidden=true></i> 
+                <span class=order_error_log>Error:</span>
+              </div>
+            </div>
+           
+            <div class=mt-4>
+              <button class="btn btn-danger badge-pill im_btn m-2">Add</button>
+              <button class="btn btn-outline-secondary badge-pill m-2" data-dismiss=modal>{{i18n-close}}</button>
+          </div>
+        </div>
+      
+        
+    </div>
+  </div>
+</div>
+
+
+<!--trigger Modal -->
+<div class="modal fade" id=triggerModal tabindex=-1 role=dialog aria-hidden=true>
+  <div class="modal-dialog modal-dialog-centered" role=document>
+    <div class=modal-content>
+      <div class="">
+        <button type=button class="close secondary" data-dismiss=modal aria-label=Close>
+          <span aria-hidden=true>&times;</span>
+        </button>
+
+      </div>
+        <h4 class="modal-title mt-3 tm_title">Trigger Contract</h4>
+        <div class=modal-body>
+            <div class="card mt-2 tm_load">
+              <div class="loading loading-xl">
+              </div>
+              <div class=m-4>
+                {{i18n-wfbc}}
+              </div>
+            </div>
+            <div class="card bd_red orange mt-3 text-left order_error hide">
+              <div class=m-4><i class=ri-alert-fill aria-hidden=true></i> 
+                <span class=order_error_log>Error:xxx</span>
+              </div>
+            </div>
+            <div class="card bd_green green mt-3 text-left order_success hide">
+              <div class=m-4><i class=ri-checkbox-circle-fill aria-hidden=true></i> 
+                <span class=order_success_log></span>
+              </div>
+            </div>
+            <div class=mt-4>
+              <button class="btn btn-outline-secondary badge-pill m-2" data-dismiss=modal>{{i18n-close}}</button>
+          </div>
+        </div>
+      
+        
+    </div>
+  </div>
+</div>
+      
+
+<!-- modal -->
+      <div class="modal fade" id=noteModal tabindex=-1 role=dialog aria-labelledby=noteModalLabel aria-hidden=true>
+          <div class="modal-dialog text-center">
+            <div class=modal-content>
+              <div class="">
+                <button type=button class="close secondary" data-dismiss=modal aria-label=Close>
+                  <span aria-hidden=true>&times;</span>
+                </button>
+        
+              </div>
+                <h4 class="modal-title mt-3">Note</h4>
+                <div class=modal-body>
+                    <div class="card mt-2 nm_load">
+                      <div class="loading loading-xl">
+        
+                      </div>
+                      <div class=m-4>
+                        
+                      </div>
+                    </div>
+                   
+                    <div class=mt-4>
+                      <button class="btn btn-outline-secondary badge-pill m-2" data-dismiss=modal>{{i18n-close}}</button>
+                  </div>
+                </div>
+              
+                
+            </div>
+
+          </div>
+        </div>
+
+
+
+  </div>
+
+
+
+  <script src=https://cdn.jsdelivr.net/npm/stickybits@3.7.8/dist/stickybits.min.js></script>
+
+  <!-- <script src=js/jquery-2.1.4.min.js></script>
+  <script src=js/bootstrap-4.5.min.js></script>
+  <script src=js/language.js></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kdufx/ht-cops-exchange/js/language.js"></script>
+  <script src=https://cdn.jsdelivr.net/gh/kdufx/ht-cops-exchange/js/path.js?59d00125aaac42131bc2></script></body>
+</html>
+
